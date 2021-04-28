@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+
+    <title>Devchallenges</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- BoxIcons -->
+     
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1 class="logo_text">This Interior</h1>
+      </div>
+      
+      <div class="menu">
+        <a href="#" class="menu_icon" id="menu_icon">
+          <i class='bx bx-menu open'></i>
+          <i class='bx bx-x close'></i>
+        </a>
+        <nav class="nav">
+          <ul class="nav_wrapper">
+            <li class="nav_wrapper-links"><a href="#">Home</a></li>
+            <li class="nav_wrapper-links"><a href="#">Collection</a></li>
+            <li class="nav_wrapper-links"><a href="#">About</a></li>
+            <li class="nav_wrapper-links"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="hero">
+      <section class="hero_text">
+        <h1>Modern Interior</h1>
+        <p>A full-service residential & commercial interior design and staging company offering professional organizing and Eco-services</p>
+        <a href="" class="cta">Read More <i class='bx bx-right-arrow-alt'></i></a>
+      </section>
+      <section class="hero_image">
+        <div class="main-img">
+          <img src="./photo1.png" alt="Interior">
+        </div>
+        <div class="profile_card">
+          <div class="profile-head">
+            <div class="profile-head-img">
+              <img src="./photo2.png" alt="Aliza">
+            </div>
+            <div class="profile-head-content">
+              <h2>Aliza Webber</h2>
+              <span>Interior Designer</span>
+            </div>
+          </div>
+          <div class="profile-body">
+            <h1>Designed in 2020 by Aliza Webber</h1>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <footer>
+      <p class="attribution">created by <a href="#">Abhinav Sawarkar</a>- <a href="#">devchallenges.io</a></p>
+    </footer> -->
+
+
+    <script>
+      let open = document.querySelector('.open');
+      let close = document.querySelector('.close');
+      let nav = document.querySelector('.nav');
+      let menu = document.querySelector('.menu');
+      let menuOpen = false;
+
+      menu.addEventListener('click' , menuToggle);
+      function menuToggle(e){
+        if(!menuOpen){
+          open.style.display = 'none';
+          close.style.display = 'block';
+          nav.style.opacity = '1';
+          nav.style.pointerEvents = 'all';
+          menuOpen = true;
+        }else{
+          close.style.display = 'none';
+          open.style.display = 'block';
+          nav.style.opacity = '0';
+          nav.style.pointerEvents = 'none';
+          menuOpen = false;
+        }
+      }
+
+
+
+    </script>
+  </body>
+</html>
